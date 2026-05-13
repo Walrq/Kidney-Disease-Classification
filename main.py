@@ -1,3 +1,13 @@
 from src.cnn_classifier import logger
+from src.cnn_classifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Log test")
+STAGE_NAME = "Data Ingestion Stage"
+try:
+    logger.info(f">>>>>stage {STAGE_NAME} start <<<<<")
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>stage {STAGE_NAME} completed <<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
+

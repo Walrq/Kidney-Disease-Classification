@@ -1,0 +1,6 @@
+/artifacts
+/artifacts_root
+.pytype/
+cython_debug/
+/.venv
+/research
