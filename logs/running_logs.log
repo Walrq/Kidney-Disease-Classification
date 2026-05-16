@@ -19,3 +19,101 @@
 [2026-05-12 16:42:05,623: INFO: common: created directory at: artifacts_root]
 [2026-05-12 16:42:05,626: INFO: common: created directory at: artifacts/data_ingestion]
 [2026-05-12 16:42:05,627: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-05-16 18:18:38,138: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-16 18:18:38,144: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-16 18:18:38,148: INFO: common: created directory at: artifacts_root]
+[2026-05-16 18:18:38,151: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-05-16 18:18:57,773: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-16 18:19:36,916: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-16 18:19:36,921: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-16 18:19:36,923: INFO: common: created directory at: artifacts_root]
+[2026-05-16 18:19:36,926: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-05-16 18:19:37,261: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-16 18:31:14,033: INFO: main: >>>>>stage Data Ingestion Stage start <<<<<]
+[2026-05-16 18:31:14,035: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-16 18:31:14,036: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-16 18:31:14,038: INFO: common: created directory at: artifacts_root]
+[2026-05-16 18:31:14,039: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-16 18:31:14,040: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-05-16 18:32:25,223: INFO: main: >>>>>stage Data Ingestion Stage start <<<<<]
+[2026-05-16 18:32:25,224: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-16 18:32:25,225: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-16 18:32:25,226: INFO: common: created directory at: artifacts_root]
+[2026-05-16 18:32:25,226: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-16 18:32:25,226: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-05-16 18:32:27,249: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))]
+Traceback (most recent call last):
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\urllib3\util\retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\src\cnn_classifier\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\src\cnn_classifier\components\data_ingestion.py", line 31, in download_file
+    raise e
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\src\cnn_classifier\components\data_ingestion.py", line 26, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\gdown\download.py", line 237, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\requests\sessions.py", line 671, in get
+    return self.request("GET", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\deban\Desktop\projects\Kidney-Disease-Classification\.venv\Lib\site-packages\requests\adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?id=13yJVY6iQksPbPMDnx2WYbQ9bgcNlWYKQ (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+[2026-05-16 18:34:03,710: INFO: main: >>>>>stage Prepare Base Model Stage start <<<<<]
+[2026-05-16 18:34:03,711: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-16 18:34:03,712: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-16 18:34:03,712: INFO: common: created directory at: artifacts_root]
+[2026-05-16 18:34:03,713: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-05-16 18:34:04,198: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2026-05-16 18:34:04,430: INFO: main: >>>>>stage Prepare Base Model Stage completed <<<<<]
